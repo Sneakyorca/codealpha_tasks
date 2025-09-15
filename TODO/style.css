@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  background: linear-gradient(135deg, #5555ff, #0000cc);
+  width: 100%;
+  height: 100vh;
+}
+.container {
+  width: 100%;
+  max-width: 560px;
+  margin: 30px auto;
+
+  background: white;
+  border-radius: 4px;
+  padding: 10px;
+}
+h2 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.add {
+  display: flex;
+  height: 40px;
+  padding-left: 20px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 10px;
+  text-align: center;
+}
+input[type="text"] {
+  padding: 12px 30px;
+  flex: 1;
+  background: #eee;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+}
+button {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding: 10px 50px;
+  position: absolute;
+  right: 0;
+  background: #ff5555;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+li {
+  list-style-type: none;
+  font-size: 17px;
+  padding: 15px 8px 15px 50px;
+  user-select: none;
+  position: relative;
+  cursor: pointer;
+}
+.one {
+  content: "";
+  background: url(circle.svg);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  left: 12px;
+  top: 14px;
+  background-position: center;
+}
+.two {
+  content: "";
+  background: url(pencil.svg) center center no-repeat;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 20%;
+  right: 40px;
+  top: 14px;
+}
+.three {
+  content: "";
+  background: url(x.svg) center center no-repeat;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 20%;
+  right: 12px;
+  top: 14px;
+  background-position: center;
+}
+.checked .one {
+  background: url(tick-mark.png) center center no-repeat;
+  background-size: contain;
+}
+.checked {
+  text-decoration: line-through;
+  color: #888;
+}
+.four {
+  padding: 8px;
+}
+@media (max-width: 600px) {
+  .container {
+    max-width: 98vw;
+    margin: 10px auto;
+    padding: 6px;
+  }
+  .add {
+    flex-direction: column;
+    height: auto;
+    padding-left: 0;
+    gap: 8px;
+  }
+  input[type="text"] {
+    width: 100%;
+    min-width: 0;
+    font-size: 16px;
+    padding: 10px 16px;
+    margin-bottom: 6px;
+  }
+  button {
+    position: static;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 4px;
+    font-size: 16px;
+  }
+}
